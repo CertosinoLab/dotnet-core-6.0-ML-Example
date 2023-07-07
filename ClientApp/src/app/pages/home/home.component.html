@@ -1,0 +1,5 @@
+<button *ngIf="!isModelTrained" (click)="train()">Train</button>
+<p *ngIf="isLoading">loading...</p>
+<button *ngIf="isModelTrained" (click)="predict()">Evaluate</button>
+<p *ngIf="isModelTrained">{{prediction}}</p>
+<app-trainer-result *ngIf="isModelTrained" [trainModelResult] = "trainModelResult"></app-trainer-result>
